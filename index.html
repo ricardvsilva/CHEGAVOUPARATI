@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>Descubra Seu Caminho em TI</title>
+  <link rel="stylesheet" href="styles.css">
+  <script defer src="dados.js"></script>
+  <script defer src="mapeamentoCarreiras.js"></script>
+  <script defer src="scripts.js"></script>
+</head>
+<body>
+<header>
+  <div class="container">
+    <h1>Descubra seu caminho em TI</h1>
+    <p class="subtitle">Encontre a carreira ideal de tecnologia para o seu perfil</p>
+  </div>
+</header>
+
+<div class="container">
+  <!-- removida barra de progresos.
+  <div class="progress-bar">
+    <div class="progress" id="progress-bar"></div>
+  </div>
+  <div class="progress-labels">
+    <span>Profissional</span>
+    <span>Perfil</span>
+    <span>Futuro</span>
+  </div>
+-->
+  <!-- Etapa 1 -->
+  <form id="quiz-form">
+    <div class="form-step active" data-step="1">
+      <div class="card">
+        <h2 class="section-title">Dados Profissionais Atuais</h2>
+        <div class="form-group">
+          <div class="question">Qual sua área de atuação atual?</div>
+          <div class="options">
+            <label class="option-card"><input type="radio" name="areaAtuacao" value="Administrativa" required>Administrativa</label>
+            <label class="option-card"><input type="radio" name="areaAtuacao" value="Operacional/Produção">Operacional/Produção</label>
+            <label class="option-card"><input type="radio" name="areaAtuacao" value="Técnica">Técnica</label>
+            <label class="option-card"><input type="radio" name="areaAtuacao" value="Gestão/Liderança">Gestão/Liderança</label>
+            <label class="option-card"><input type="radio" name="areaAtuacao" value="Comercial/Vendas">Comercial/Vendas</label>
+            <label class="option-card"><input type="radio" name="areaAtuacao" value="Prestação de Serviços">Prestação de Serviços</label>
+            <label class="option-card"><input type="radio" name="areaAtuacao" value="Saúde">Saúde</label>
+            <label class="option-card"><input type="radio" name="areaAtuacao" value="Educação">Educação</label>
+          </div>
+        </div>
+        <div class="form-group">
+          <div class="question">Qual seu nível de escolaridade?</div>
+          <div class="options">
+            <label class="option-card"><input type="radio" name="escolaridade" value="Fundamental" required>Fundamental</label>
+            <label class="option-card"><input type="radio" name="escolaridade" value="Médio">Médio</label>
+            <label class="option-card"><input type="radio" name="escolaridade" value="Superior">Superior</label>
+            <label class="option-card"><input type="radio" name="escolaridade" value="Pós-graduação">Pós-graduação</label>
+            <label class="option-card"><input type="radio" name="escolaridade" value="Mestrado">Mestrado</label>
+            <label class="option-card"><input type="radio" name="escolaridade" value="Doutorado">Doutorado</label>
+          </div>
+        </div>
+        <div class="form-group">
+          <div class="question">Você já teve contato com a área de tecnologia?</div>
+          <div class="options">
+            <label class="option-card"><input type="radio" name="contatoTecnologia" value="Sim" required>Sim</label>
+            <label class="option-card"><input type="radio" name="contatoTecnologia" value="Pouco">Pouco</label>
+            <label class="option-card"><input type="radio" name="contatoTecnologia" value="Não">Não</label>
+          </div>
+        </div>
+        <!-- Removido botão navegação tela 1
+		<div class="navigation">
+          <span></span>
+          <button type="button" class="next" onclick="proximaEtapa(1)">Próxima Etapa</button>
+        </div>-->
+      </div>
+    </div>
+
+    <!-- Etapa 2 -->
+    <div class="form-step" data-step="2">
+      <div class="card">
+        <h2 class="section-title">Habilidades e Personalidade</h2>
+        <div class="form-group">
+          <div class="question">Como você avalia suas habilidades analíticas?</div>
+          <div class="options">
+            <label class="option-card"><input type="radio" name="habilidadesAnaliticas" value="Baixa" required>Baixa</label>
+            <label class="option-card"><input type="radio" name="habilidadesAnaliticas" value="Média">Média</label>
+            <label class="option-card"><input type="radio" name="habilidadesAnaliticas" value="Alta">Alta</label>
+            <label class="option-card"><input type="radio" name="habilidadesAnaliticas" value="Muito Alta">Muito Alta</label>
+          </div>
+        </div>
+        <div class="form-group">
+          <div class="question">Você prefere trabalhar sozinho ou em equipe?</div>
+          <div class="options">
+            <label class="option-card"><input type="radio" name="trabalhoEquipe" value="Sozinho" required>Sozinho</label>
+            <label class="option-card"><input type="radio" name="trabalhoEquipe" value="Em Equipe">Em Equipe</label>
+            <label class="option-card"><input type="radio" name="trabalhoEquipe" value="Ambos">Ambos</label>
+          </div>
+        </div>
+        <div class="form-group">
+          <div class="question">Como você se descreveria em relação ao seu temperamento no trabalho?</div>
+          <div class="options">
+            <label class="option-card"><input type="radio" name="temperamento" value="Calmo" required>Calmo</label>
+            <label class="option-card"><input type="radio" name="temperamento" value="Dinâmico">Dinâmico</label>
+            <label class="option-card"><input type="radio" name="temperamento" value="Paciente">Paciente</label>
+            <label class="option-card"><input type="radio" name="temperamento" value="Extrovertido">Extrovertido</label>
+            <label class="option-card"><input type="radio" name="temperamento" value="Introvertido">Introvertido</label>
+            <label class="option-card"><input type="radio" name="temperamento" value="Comunicativo">Comunicativo</label>
+          </div>
+        </div>
+        <!-- Removido botão navegação tela 2
+		<div class="navigation">
+          <button type="button" class="prev" onclick="etapaAnterior(2)">Etapa Anterior</button>
+          <button type="button" class="next" onclick="proximaEtapa(2)">Próxima Etapa</button>
+        </div>-->
+      </div>
+    </div>
+
+    <!-- Etapa 3 -->
+    <div class="form-step" data-step="3">
+      <div class="card">
+        <h2 class="section-title">Objetivos e Preferências</h2>
+        <div class="form-group">
+          <div class="question">Qual a faixa salarial pretendida?</div>
+          <div class="options">
+            <label class="option-card"><input type="radio" name="faixaSalarial" value="Menos de 2000" required>Até R$2.000</label>
+            <label class="option-card"><input type="radio" name="faixaSalarial" value="2000-4000">R$2.000 a R$4.000</label>
+            <label class="option-card"><input type="radio" name="faixaSalarial" value="4000-6000">R$4.000 a R$6.000</label>
+            <label class="option-card"><input type="radio" name="faixaSalarial" value="Mais de 6000">Acima de R$6.000</label>
+          </div>
+        </div>
+        <div class="form-group">
+          <div class="question">Qual modelo de trabalho prefere?</div>
+          <div class="options">
+            <label class="option-card"><input type="radio" name="preferenciaTrabalho" value="Presencial" required>Presencial</label>
+            <label class="option-card"><input type="radio" name="preferenciaTrabalho" value="Remoto">Remoto</label>
+            <label class="option-card"><input type="radio" name="preferenciaTrabalho" value="Híbrido">Híbrido</label>
+            <label class="option-card"><input type="radio" name="preferenciaTrabalho" value="Indiferente">Indiferente</label>
+          </div>
+        </div>
+        <div class="form-group">
+          <div class="question">O que mais te motiva?</div>
+          <div class="options">
+            <label class="option-card"><input type="radio" name="motivacao" value="Salário" required>Salário</label>
+            <label class="option-card"><input type="radio" name="motivacao" value="Aprendizado e Crescimento">Aprendizado e Crescimento</label>
+            <label class="option-card"><input type="radio" name="motivacao" value="Impacto Social">Impacto Social</label>
+            <label class="option-card"><input type="radio" name="motivacao" value="Flexibilidade">Flexibilidade</label>
+            <label class="option-card"><input type="radio" name="motivacao" value="Ver Resultados Concretos">Ver resultados concretos</label>
+          </div>
+        </div>
+        
+		<div class="navigation">
+          <!-- Removido botão navegação tela 3
+		  <button type="button" class="prev" onclick="etapaAnterior(3)">Etapa Anterior</button>
+		  -->
+          <button type="button" class="submit" onclick="calculateResult()">Ver Resultado</button>
+        </div>
+      </div>
+    </div>
+  </form>
+
+  <!-- Adsense pode ir aqui, entre as etapas, para monetizar -->
+
+  <div id="result-container" class="hidden">
+    <div id="result-content"></div>
+    <button class="submit" onclick="reiniciarQuiz()">Refazer Teste</button>
+    <!-- Sugestão: Campo opcional para o usuário inserir email e receber resultado -->
+    <!-- <form id="email-form">
+         <input id="email-usuario" type="email" placeholder="Digite seu e-mail para receber" required>
+         <button type="submit">Enviar resultado</button>
+         </form> -->
+  </div>
+</div>
+<footer>
+  Projeto © 2025 | Transição para TI com Inteligência Artificial
+</footer>
+</body>
+</html>

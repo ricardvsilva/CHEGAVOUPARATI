@@ -1,0 +1,47 @@
+:root {
+  --azul-medio: #3498db;
+  --verde-azulado: #2ecc71;
+  --azul-escuro: #2c3e50;
+  --cinza-claro: #ecf0f1;
+  --laranja: #e67e22;
+  --roxo-suave: #9b59b6;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: var(--cinza-claro);
+  color: var(--azul-escuro);
+  min-height: 100vh;
+}
+
+header { background-color: var(--azul-escuro); color: white; padding: 20px 0; text-align: center; border-bottom: 5px solid var(--verde-azulado); }
+.container { max-width: 800px; margin: 0 auto; padding: 20px; }
+
+.progress-bar { height: 8px; background: #fff; border-radius: 4px; box-shadow: 0 2px 5px rgba(0,0,0,0.07); overflow:hidden; margin-bottom: 15px;}
+.progress { height: 100%; background: linear-gradient(90deg, var(--azul-medio), var(--verde-azulado)); width: 0%; transition: width 0.5s;}
+.progress-labels { display:flex; justify-content:space-between; font-size: 14px; margin-bottom:10px;}
+
+.section-title { color: var(--azul-medio); font-weight: bold; margin-bottom: 16px;}
+.card { background: white; border-radius: 8px; padding: 30px; margin-bottom: 20px; box-shadow: 0 4px 6px rgba(0,0,0,0.06);}
+.form-group { margin-bottom: 24px;}
+.question { margin-bottom: 8px; font-weight: bold;}
+.options { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px,1fr)); gap:10px;}
+.option-card { background: var(--cinza-claro); border-radius: 5px; padding: 14px; cursor: pointer; transition: 0.2s; border: 2px solid transparent; }
+.option-card.selected,.option-card input[type="radio"]:checked + span { background: var(--azul-medio); color: #fff; border-color: var(--azul-medio);}
+.option-card:hover { border-color: var(--azul-medio);}
+.option-card input[type="radio"] { display:none; }
+
+.navigation { display: flex; justify-content: space-between; margin-top: 18px;}
+.next,.prev,.submit { padding: 12px 24px; border-radius:5px; font-weight: bold; cursor:pointer;}
+.next, .submit { background: var(--laranja); color: #fff;}
+.prev { background: var(--cinza-claro); color: var(--azul-escuro);}
+.submit { background: var(--verde-azulado);}
+button:active { transform: translateY(1px);}
+
+#result-container { text-align:center; background: #d0eaff; border-radius: 8px; margin-top: 18px; padding:24px;}
+.hidden { display:none;}
+
+@media (max-width: 700px){
+  .options { grid-template-columns: 1fr;}
+  .card { padding: 16px;}
+}
